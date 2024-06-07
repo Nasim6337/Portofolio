@@ -1,0 +1,171 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body {
+    background-color: rgb(16, 16, 16);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(244, 239, 239);
+}
+
+.header {
+    display: flex;
+    margin: 10px;
+    padding: 25px;
+    width: 95%;
+    font-weight: bolder;
+    font-size: larger;
+    justify-content: space-between;
+    background-color: rgb(29, 28, 28) ;
+
+}
+
+
+.subheader {
+    display: flex;
+    position: absolute;
+    left: 350px;
+    width: 70%;
+    justify-content: space-around;
+    list-style: none;
+}
+.subheader li:hover{
+    color: rgb(202, 197, 217);
+}
+
+.dot{
+    display: flex;
+    flex-direction: column;
+  
+   
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.dot span{
+    z-index: -1;
+}
+.dot span{
+    width: 25px;
+    height: 3px;
+    margin: 3px;
+    background-color: red;
+    
+}
+
+.content {
+    width: 92%;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    padding: 25px;
+
+
+}
+
+.heading {
+    margin: 40px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.subcontent {
+    height: 400px;
+    width: 95%;
+    margin: 5px;
+}
+
+.about_column {
+    height: auto;
+    margin: 30px;
+    width: 90vw;
+    color: rgb(141, 224, 161);
+    display: flex;
+}
+
+ .skills{
+    display:flex;
+   flex-direction: column;
+   margin: 10px;
+ }
+ 
+ .experience {
+display: flex;
+flex-direction: column;
+margin: 10px;
+}
+
+
+.education{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+.footer{
+    text-align: center;
+}
+button{
+    padding: 8px;
+    position: relative;
+    left: 40px;
+    margin: 10px;
+    top: -10px;
+    background-color: rgb(16, 16, 16) ;
+    color: white;
+   
+}
+a{
+    text-decoration: none;
+    font-weight: bolder; 
+    color: aliceblue;
+}
+
+@media (min-width:200px) and (max-width:420px) {
+    .header{
+        margin: 10px;
+       
+    }
+    .subheader{
+        left: 30px; 
+    }
+    .content{
+        flex-direction: column;
+        margin: 0;
+        
+    }
+    .img_con{
+        position: relative;
+        left: -270px;
+        top: 30px;
+    }
+    .about_column{
+        flex-direction: column;
+    }
+.dot{
+    position: relative;
+    right: 80px;
+    border: 2px solid white;
+    border-radius: 10%;
+}
+.dot span{
+    z-index: 1;
+}
+ .subheader{
+    flex-direction: column;
+    left: -8px;
+    top:32px ;
+    background-color:red;
+    height: 260px;
+    width: 110px;
+    display: none;
+ }
+ .dot:hover .subheader{
+    background-color: red;
+    color: black;
+    display: flex;
+ }
+
+
+}
