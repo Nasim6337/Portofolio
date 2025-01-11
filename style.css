@@ -1,238 +1,198 @@
-* {
-    margin: 0px;
-    padding: 0px;
-
-}
-
-body {
-    background-color: rgb(16, 16, 16);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(244, 239, 239);
 }
 
-.header {
-    display: flex;
-    margin: 10px;
-    padding: 25px;
-    width: 95%;
-    font-weight: bolder;
-    font-size: larger;
-    justify-content: space-between;
-    background-color: rgb(29, 28, 28) ;
-
-}
-
-
-.subheader {
-    display: flex;
-    position: absolute;
-    left: 350px;
-    width: 70%;
-    justify-content: space-around;
-    list-style: none;
-}
-.subheader li:hover{
-    color: rgb(202, 197, 217);
-}
-
-.dot{
-    display: flex;
-    flex-direction: column;
-  
+#mainContainer{
+    background: linear-gradient(to right,#151314,#333032,#424042,#494949,#151314);
+    box-shadow: inset 0 0 1px #666464;
    
-    height: 30px;
-    width: 30px;
-    cursor: pointer;
 }
-.dot span{
-    z-index: -1;
+#first{
+    width: 15vw;
+    background-color: transparent;
+    animation: slideleft 1s ease .1s 1  ;
 }
-.dot span{
-    width: 25px;
-    height: 3px;
-    margin: 3px;
-    background-color: red;
+
+#subContainer{
+    width: 50vw;
+    background-color: transparent;
+    animation: slideright 1.5s ease .1s 1  ;
     
 }
-
-.content {
-    width: 92%;
-    height: auto;
-    margin: 10px;
-    display: flex;
-    padding: 25px;
-
-
+#subContainer span:hover{
+    color: #0ef;
 }
 
-.heading {
-    margin: 40px;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.subcontent {
-    height: 400px;
-    width: 95%;
-    margin: 5px;
-}
-
-.about_column {
-    height: auto;
-    margin: 30px;
-    width: 90vw;
-    color: rgb(141, 224, 161);
-    display: flex;
-}
-
- .skills{
-    display:flex;
-   flex-direction: column;
-   margin: 10px;
- }
- 
- .experience {
-display: flex;
-flex-direction: column;
-margin: 10px;
+#text{
+    animation: slideleft 1s ease .1s 1  ;
 }
 
 
-.education{
-    display: flex;
-    flex-direction: column;
-    margin: 15px;
+.content p{
+    margin-top: 15px;
 }
-.footer{
+
+#div{
+    width: 30vw;
+    
+}
+#Photo img{
+    margin: auto auto;
     text-align: center;
+    box-shadow: 0 0 25px cyan,0 0 40px cyan;
 }
-button{
-    padding: 8px;
+
+.icon box-icon{
     position: relative;
-    left: 40px;
-    margin: 10px;
-    top: -10px;
-    background-color: rgb(16, 16, 16) ;
-    color: white;
-   
-}
-a{
-    text-decoration: none;
-    font-weight: bolder; 
-    color: aliceblue;
+    cursor: pointer;
+    border-radius: 50%;
+    border:2px solid cyan;
+    background-color: rgb(20, 174, 185);
+    width: 35px;
+    height: 35px;
+    box-shadow: 0 0 5px cyan,0 0 10px cyan;
+    animation: slideright 1s ease .1s 1  ;
 }
 
-.pro{
-    margin-left: 30px;
-    width: 95vw;
-
-}
-.pro h3{
-    color:red;
-    font-weight: bold;
-}
-.inner_pro{
-    display: grid;
-    grid-template-columns:repeat(2,1fr);
-    grid-template-rows: repeat(1,1fr);
+.icon box-icon:hover{
+box-shadow: 0 0 5px cyan,0 0 10px cyan,0 0 30px cyan;
 
 }
 
-.project{
-    color: white;
-    border: 2px solid rgb(29, 28, 28)  ;
-    margin: 10px;
-    border-radius: 50px;
-}
-h4{
-    margin-left: 20px;
-    margin-top: 20px;
-}
-.project img{
-    transition: 1s;
-    position: relative;
-    display: block;
-    width: 300px;
-    height: 330px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50px;
-}
-.project img:hover{
-    transform: scale(0.9);
-}
-
-.subcontent img{
-    width:auto; height:400px; position: relative; left: 250px;
-}
-
-
-
-@media (min-width:200px) and (max-width:420px) {
+#buttons button{
+    border-radius: 5px;
+    background-color: #0ef;
+    color: black;
+    font-weight: 700;
+    padding: 5px;
+    box-shadow: 0 0 5px cyan,0 0 10px cyan;
     
-    .header{
-        margin: 10px;
-       
+}
+
+#buttons button:hover{
+    box-shadow: 0 0 5px cyan,0 0 10px cyan,0 0 30px cyan;
+    
     }
-    .subheader{
-        left: 30px; 
-    }
-    .content{
-        flex-direction: column;
-        margin: 0;
+#soft{
+    animation: slideright 1s ease .1s 1  ;
+}
+#technical{
+    animation: slideleft 1s ease .1s 1  ;
+}
+
+.aboutfirst{
+    animation: slideleft 1s ease .1s 1  ;
+}
+.aboutsecond{
+    animation: slidedown 1s ease .1s 1  ;
+}
+.aboutthird{
+    animation: slideright 1s ease .1s 1  ;
+}
+@keyframes slideleft {
+    0%{
+        transform: translateX(-250px);
         
     }
-    .img_con{
-        position: relative;
-        left: -270px;
-        top: 30px;
+    100%{
+        transform: translateX(0px);
     }
-    .about_column{
-        flex-direction: column;
-        width: 80vw;
-    }
-.dot{
-    position: relative;
-    right: 80px;
-    border: 2px solid white;
-    border-radius: 10%;
 }
-.dot span{
-    z-index: 2;
-}
- .subheader{
-    z-index: 1;
-    left: -8px;
-    top:-10px ;
-    background-color:red;
-    height: 100vh;
-    width: 140px;
-    transition: 1s linear;
-    display: none;
- }
 
- .subheader li{
-    margin-top: 50px;
- }
- .dot:hover span{
-    background-color: green;
- }
- .dot:hover .subheader{
-    background-color: red;
-    color: black;
-    display: block;
-    transform: translateX(-10px);
- }
- .inner_pro{
-    grid-template-columns: repeat(1,1fr);
-    grid-template-rows: repeat(2,1fr);
- }
- h4{
-    margin-top: 1px;
- }
- .project img{
-    width: 250px ;
-    height: 300px;
- }
- 
+@keyframes slideright {
+    0%{
+        transform: translateX(250px);
+        
+    }
+    100%{
+        transform: translateX(0px);
+    }
 }
+
+@keyframes slideup {
+    0%{
+        transform: translateY(-250px);
+        
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slidedown {
+    0%{
+        transform: translateY(250px);
+        
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+
+
+
+@media(min-width:300px) and (max-width:720px) {
+    
+    #first{
+        width: 55vw;
+        
+    }
+    #subcontainer{
+            margin-top: 20px;
+             
+    }
+    #subContainer{
+        top: 0px;
+        transition: 2s;
+        left: 50vw;
+        z-index: 10;
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        justify-content: start;
+        height: 100vh;
+        width: 50vw;
+        background-color: #a3c2c2;
+        animation: none;
+    }
+
+#subContainer span{
+    margin-top: 20px;
+}
+#subContainer span:hover{
+    color: rgb(22, 21, 21);
+}
+
+
+    .menu{
+        display: flex;
+        position: absolute;
+        left: 75vw;
+    
+    }
+    
+    .xbut{
+        top: 0px;
+        left: 20px;
+        position:absolute;
+    }
+
+   
+
+    #buttons button{
+        font-weight: 500;
+       
+        
+    }
+}
+
+
